@@ -1,16 +1,16 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Main from "./pages/main";
 import Product from "./pages/product";
 
-const Routes = () => (
+const RoutesApp = () => (
   <BrowserRouter>
-    <Switch>
+    <Routes>
       <Route exact path="/" component={Main} />
       <Route path="/products/:id" component={Product} />
-    </Switch>
+    </Routes>
   </BrowserRouter>
 );
 
-export default Routes;
+export default RoutesApp;
